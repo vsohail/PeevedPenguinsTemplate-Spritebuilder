@@ -31,7 +31,7 @@
     _mouseJointNode.physicsBody.collisionMask = @[];
     
     // visualize physics bodies & joints
-    // _physicsNode.debugDraw = TRUE;
+     _physicsNode.debugDraw = TRUE;
 }
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event

@@ -30,6 +30,8 @@
     _pullbackNode.physicsBody.collisionMask = @[];
     _mouseJointNode.physicsBody.collisionMask = @[];
     
+    _physicsNode.collisionDelegate = self;
+    
     // visualize physics bodies & joints
     // _physicsNode.debugDraw = TRUE;
 }

@@ -31,7 +31,7 @@
     _mouseJointNode.physicsBody.collisionMask = @[];
     
     // visualize physics bodies & joints
-     _physicsNode.debugDraw = TRUE;
+    // _physicsNode.debugDraw = TRUE;
 }
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
@@ -84,6 +84,10 @@
 - (void)releaseCatapult {
     if (_mouseJoint != nil)
     {
+        // releases the joint and lets the catapult snap back
+        [_mouseJoint invalidate];
+        _mouseJoint = nil;
+        
         // releases the joint and lets the penguin fly
         [_penguinCatapultJoint invalidate];
         _penguinCatapultJoint = nil;
